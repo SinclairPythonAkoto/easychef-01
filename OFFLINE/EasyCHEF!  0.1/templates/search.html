@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2>Search For A Meal</h2>
+
+
+<form action="{{ url_for('search') }}" method="post">
+	<div class="container">
+		<p>Use <strong>EasyCHEF!</strong> to help you find something to eat from your leftovers in your fridge or kitchen!</p><br>
+		<p>Find me a meal with..</p>  <input type="text" name="ingredients" placeholder="Leftovers from fridge / kitchen.." required>
+		<button type="submit">Find Meal!</button>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="containerResults">
+	{% if ingredients %}
+		<h3 style="text-align: left; font-style: italic;">Your meal provided by <strong>EasyCHEF!</strong> is:</h3>
+		<div >
+		{% block content %}
+			<div>
+				<p>{{ title }}</p><br>
+				<p><img src="{{ image }}"><br>{{ title }}</p><br>
+				{% for s in steps %}
+				<ul>
+					<li>{{ s['step'] }}</li>
+				</ul>
+				{% endfor %}
+				<p>{{ duration }}: mins</p><br>
+				<p>Check out the <a href="{{ url_source }}">Page Source</a> for a detailed menu.</p>
+			</div>
+		{% endblock %}
+		</div>
+	{% endif %}
+	</div>
+</form>
+<br>
+<br>
+<br>
+<footer>
+	<a href="{{ url_for('search') }}">Refresh</a>  <a href="{{ url_for('home') }}">Home</a>  <a href="{{ url_for('random') }}">Random Meal!</a>  <a href="https://sinclairakotoportfolio.herokuapp.com/">Portfolio</a>
+</footer>
+
+
+{% endblock %}

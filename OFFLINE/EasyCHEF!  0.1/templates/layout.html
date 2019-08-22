@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyCHEF! 0.1</title>
+	<style>
+		body {
+			background-color: lightgray;
+		}
+		.content {
+          padding: 20px;
+          background-color: rgba(26,188,156,0.591);
+        }
+
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+          width: 40%;
+        }
+        .containerResults {
+          border-radius: 5px;
+          background-color: lightgreen;
+          padding: 20px;
+          width: 70%;
+          background-image: none;
+        }
+	</style>
+</head>
+<body>
+	<div>
+		<h1>EasyCHEF!</h1>
+		<h6 style="font-style: bold italic;">An easy choice of healthy eating foods!</h6>
+	</div>
+	{% block body %}
+		{% block content %}{% endblock %}
+	{% endblock %}
+</body>
+</html>

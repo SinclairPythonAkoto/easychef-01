@@ -1,14 +1,8 @@
-Flask SQLAlchemy Heroku test 0.2
+EasyCHEF! 0.1
+An easy choice of healthy eating foods!
 
-This is a quick app that tests the way I have deployed my web app to Heroku.
+This is app allows users to choose something different to eat by inputing an ingredient.  The user is then given a recipe to cook, with the step by step process and the link to where the recipe was found.
 
-I want to test if this process works for me, and how to show information from a database.
+This web app is intended to test my skills with API's 
 
-If this works I will be able to use this as my own template to make furture web applications.
-
-After spending a VERY VERY long time (roughly 3-4 weeks) using trail & error methods to solve why my database page wasn't loading, I am pleased to say that it is now complete!
-
-Now I can use this as my template for future web apps.
-
-I will also look to build on this web app for asthetic purposes.
-
+For now it is a simple app until I build more onto it when my skills have expanded.

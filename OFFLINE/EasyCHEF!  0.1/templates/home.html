@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div>
+	<p>Please select in which way you would like EasyCHEF! to produce a recipe for you.</p>
+</div>
+<br>
+<a href="{{ url_for('search') }}">Search</a>
+<br>
+<a href="{{ url_for('random') }}">Something Random!</a>
+
+{% endblock %}
