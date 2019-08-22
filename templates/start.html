@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 110px;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Text Blocks</h2>
+<p>This is a simple app to test API's</p>
+<br><p><strong>EasyCHEF!</strong> will be used to develop my skills with APIS's</p>
+
+<div>
+  <img src="/static/wooden-kitchen-countertop.jpg" alt="Nature" style="width:100%;">
+  <div class="text-block">
+    <h4> </h4>
+    <p>EasyCHEF!</p>
+  </div>
+  
+</div>
+
+</body>
+{% endblock %}
