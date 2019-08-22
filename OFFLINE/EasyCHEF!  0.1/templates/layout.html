@@ -7,26 +7,56 @@
 			background-color: lightgray;
 		}
 		.content {
-          padding: 20px;
-          background-color: rgba(26,188,156,0.591);
-        }
+      padding: 20px;
+      background-color: rgba(26,188,156,0.591);
+    }
 
-        .container {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
-          width: 40%;
-        }
-        .containerResults {
-          border-radius: 5px;
-          background-color: lightgreen;
-          padding: 20px;
-          width: 70%;
-          background-image: none;
-        }
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 40%;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #1abc9c;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .pagestyle {
+      font-family: Arial;
+      margin: 0;
+      background-color: lightgray;
+    }
+
 	</style>
 </head>
-<body>
+<body class="pagestyle">
+  <div class="topnav">
+      <a href="{{ url_for('start_pg') }}">START</a>
+      <a href="{{ url_for('search') }}">SEARCH</a>
+      <a href="">Random Recipe</a>
+      <a href="">EasyCHEF!</a>
+  </div>
 	<div>
 		<h1>EasyCHEF!</h1>
 		<h6 style="font-style: bold italic;">An easy choice of healthy eating foods!</h6>
@@ -35,4 +65,8 @@
 		{% block content %}{% endblock %}
 	{% endblock %}
 </body>
+<footer>
+  <a href="{{ url_for('home') }}">Home</a>  |   <a href="{{ url_for('search') }}">Refresh</a>   |   <a href="{{ url_for('random') }}">Random Meal!</a>    |   <a href="https://sinclairakotoportfolio.herokuapp.com/">Portfolio</a>
+</footer>
+
 </html>
