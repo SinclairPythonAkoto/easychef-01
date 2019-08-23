@@ -104,7 +104,7 @@ def easysearch_feedback():
 		exp = request.form.get('experience')
 		func = request.form.get('functionality')
 		looks = request.form.get('aesthetics')
-		message = request.form.get('comment')
+		message = request.form.get('subject')
 
 		db_data = EasySeach_Feedback(name, exp, func, looks, message)
 		session.add(db_data)
