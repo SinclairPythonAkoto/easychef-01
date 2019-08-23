@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<h1 style="text-align: center">EasyCHEF! Feedback Form</h1>
+
+<div>
+		<div>
+			<p>
+				Your feedback is very important to me, it will give me an idea on where I am excelling and areas I need to improve.
+			</p>
+			<div class="content">
+				<h2 style="text-align: left">Feedback Form</h2>
+				<P>
+					Please complete the feedback form below.
+				</P>
+				<div class="containerFeedback">
+					<form action="{{ url_for('feedback') }}" method="post">
+					<div class="form-group">
+						<label for="inputname" class="sr-only">Name</label>
+						<input type="text" name="name" id="inputname" class="form-control" placeholder="Enter your name" required autofocus>
+						<label for="totexperience">How would you rate the total experience of <strong>EasyCHEF!</strong></label>
+						<div class="emoji">
+							<select class="emoji" name="experience">
+								<option disabled selected value="">Please Select</option>
+								<option value="excellent_10">&#129321</option>
+								<option value="great_9">&#129297</option>
+								<option value="cool_8">&#128526</option>
+								<option value="satisfactory_7">&#128077</option>
+								<option value="good_6">&#128578</option>
+								<option value="confusing_5">&#129300</option>
+								<option value="boring_4">&#128564</option>
+								<option value="bad_3">&#128078</option>
+								<option value="annoying_2">&#129324</option>
+								<option value="rubbish_1">&#128169</option>
+							</select>
+						</div>
+						<br>
+						<label for="userFunctionality">Functionality / User friendly?</label>
+						<div class="emoji" name="web_func">
+							<select class="emoji" name="functionality">
+								<option disabled selected value="">Please Select</option>
+								<option value="excellent_10">&#129321</option>
+								<option value="great_9">&#129297</option>
+								<option value="cool_8">&#128526</option>
+								<option value="satisfactory_7">&#128077</option>
+								<option value="good_6">&#128578</option>
+								<option value="confusing_5">&#129300</option>
+								<option value="boring_4">&#128564</option>
+								<option value="bad_3">&#128078</option>
+								<option value="annoying_2">&#129324</option>
+								<option value="rubbish_1">&#128169</option>
+							</select>
+						</div>
+						<br>
+						<label for="portfAsthetics">Aesthetics of portfolio?</label>
+						<div class="emoji" name="looks">
+							<select class="emoji" name="aesthetics">
+								<option disabled selected value="">Please Select</option>
+								<option value="excellent_10">&#129321</option>
+								<option value="great_9">&#129297</option>
+								<option value="cool_8">&#128526</option>
+								<option value="satisfactory_7">&#128077</option>
+								<option value="good_6">&#128578</option>
+								<option value="confusing_5">&#129300</option>
+								<option value="boring_4">&#128564</option>
+								<option value="bad_3">&#128078</option>
+								<option value="annoying_2">&#129324</option>
+								<option value="rubbish_1">&#128169</option>
+							</select>
+						</div>
+						<br>
+						<label for="userComment">Comment</label>
+						<div class="comment" name="comment">
+							<textarea id="subject" name="subject" placeholder="How was your experience?  Leave a review, your feedback is important to me." style="height:200px" required></textarea>
+						    <input type="submit" value="Submit">
+						</div>
+					</div>
+				</form>
+
+
+{% endblock %}
