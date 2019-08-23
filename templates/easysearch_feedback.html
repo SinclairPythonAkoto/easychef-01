@@ -73,11 +73,42 @@
 						<br>
 						<label for="userComment">Comment</label>
 						<div class="comment" name="comment">
-							<textarea id="subject" name="subject" placeholder="How was your experience?  Leave a review, your feedback is important to me." style="height:200px" style="width: 60%" required></textarea>
+							<textarea id="subject" name="subject" placeholder="How was your experience?  Leave a review, your feedback is important to me." style="height:200px" style="width: 60%" ></textarea>
 						    <input type="submit" value="Submit">
 						</div>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<p>Thank you for taking the time to complete the feedback form.</p>
+<br>
+<p>If you would like to send me a message click <a href="https://sinclairakotoportfolio.herokuapp.com/contact"><strong>here</strong></a>.</p>
+<div>
+	<h2><strong>EasyCHEF!</strong> Feedback Results</h2>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>EXPERIENCE</th>
+			<th>FUNCTIONALITY</th>
+			<th>AESTHETICS</th>
+			<th>COMMENTS</th>
+		</tr>
+		{% for d in data %}
+		<tr>
+			<td>{{ d.id }}</td>
+			<td>{{ d.name }}</td>
+			<td>{{ d.experience }}</td>
+			<td>{{ d.functionality }}</td>
+			<td>{{ d.aesthetics }}</td>
+			<td>{{  d.comments }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
 
 
 {% endblock %}

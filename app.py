@@ -97,6 +97,7 @@ def search():
 @app.route('/easyseach_feedback', methods=['GET', 'POST'])
 def easysearch_feedback():
 	if request.method == 'GET':
+		data = session.query(EasySeach_Feedback).all()
 		return render_template('easysearch_feedback.html')
 	else:
 		name = request.form.get('name')
