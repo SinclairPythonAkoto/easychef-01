@@ -62,7 +62,7 @@ def search():
 
 		url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/searchComplex"
 
-		querystring = {"query":f"{ing}","includeIngredients":"onions, garlic, tomato","excludeIngredients":"bacon","ranking":"2","instructionsRequired":"true","addRecipeInformation":"true","limitLicense":"true","number":"1"}
+		querystring = {"query":f"{ing}","includeIngredients":f"{ing}","excludeIngredients":"bacon","ranking":"2","instructionsRequired":"true","addRecipeInformation":"true","limitLicense":"true","number":"1"}
 
 		headers = {
 		    'x-rapidapi-host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
