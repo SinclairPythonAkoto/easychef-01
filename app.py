@@ -98,7 +98,7 @@ def search():
 def easysearch_feedback():
 	if request.method == 'GET':
 		data = session.query(EasySeach_Feedback).all()
-		return render_template('easysearch_feedback.html')
+		return render_template('easysearch_feedback.html', data=data)
 	else:
 		name = request.form.get('name')
 		exp = request.form.get('experience')
@@ -113,6 +113,22 @@ def easysearch_feedback():
 		data = session.query(EasySeach_Feedback).all()
 
 		return render_template('easysearch_feedback.html', data=data)
+
+
+@app.route('/foods_feed')
+def foods_feed():
+	url = ('https://newsapi.org/v2/everything?'
+       'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&'
+       'from=2019-08-23&'
+       'sortBy=popularity&'
+       'apiKey=134b50d54e2948399817da7fa47477b0')
+
+	response = requests.get(url)
+
+	r = response.json()
+
+	newsBlock = r['articles']
+	return render_template('foods_feed.html', newsBlock=newsBlock)
 
 
 

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+	.newsBorder {
+	  padding: 20px;
+	  background-color: rgba(26,188,156,0.591);
+	}
+
+	.newsBox {
+	  border-radius: 5px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+	  width: 40%;
+	}
+
+/*	.newsPic {
+		width: 60%;
+		height: 30%;
+	}
+*/
+	.newsTitle {
+		text-align: center;
+		font-style: italic; 
+	}
+</style>
+
+<h1><strong>EasyCHEF!</strong> Foods Feed</h1>
+
+<p>This is an extention of API interaction with my app.  This page provides a news feed of 'food news' through an API.</p>
+<a href="{{ url_for('foods_feed') }}">Refresh</a>
+<br>
+<div class="newsBorder">
+{% for news in newsBlock %}
+<div class="newsTitle">
+	<strong>{{ news['title'] }}</strong><br>
+	<strong>{{ news['publishedAt'] }}</strong>
+</div>
+	<div class="newsPic">
+		<img src="{{ news['urlToImage'] }}">
+	</div>
+	<div class="newsContent">
+		<p><strong>EasyCHEF! News:</strong> {{ news['description'] }}</p>
+		<a href="{{ news['url'] }}">Web source</a>
+	</div>
+{% endfor %}	
+</div>
+<br>
+<br>
+
+<br>
+<a href="{{ url_for('foods_feed') }}">Refresh</a>
+
+{% endblock %}

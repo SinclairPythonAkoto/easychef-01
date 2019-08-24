@@ -25,7 +25,7 @@ def search():
 
 		url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/searchComplex"
 
-		querystring = {"query":f"{ing}","includeIngredients":"onions, garlic, tomato","excludeIngredients":"bacon","ranking":"2","instructionsRequired":"true","addRecipeInformation":"true","limitLicense":"true","number":"1"}
+		querystring = {"query":f"{ing}","excludeIngredients":"bacon","ranking":"2","instructionsRequired":"true","addRecipeInformation":"true","limitLicense":"true","number":"1"}
 
 		headers = {
 		    'x-rapidapi-host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
@@ -56,6 +56,23 @@ def search():
 
 
 		return render_template('search.html', title=title, duration=duration, image=image, url_source=url_source, steps=steps)
+
+@app.route('/foods_feed')
+def foods_feed():
+	url = ('https://newsapi.org/v2/everything?'
+       'q=cooking&food&culinary&chef&recipes&kitchen&'
+       'from=2019-08-23&'
+       'sortBy=popularity&'
+       'apiKey=134b50d54e2948399817da7fa47477b0')
+
+	response = requests.get(url)
+
+	r = response.json()
+
+	newsBlock = r['articles']
+	return render_template('foods_feed.html', newsBlock=newsBlock)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

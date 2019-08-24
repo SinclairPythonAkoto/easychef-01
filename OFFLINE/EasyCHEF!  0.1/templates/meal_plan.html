@@ -1,0 +1,53 @@
+{%  extends "layout.html" %}
+
+{% block body %}
+
+<style>
+	.containerFeedback {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 35%;
+    }
+</style>
+
+
+<h1 style="font-style: italic; text-align: center"><strong>EasyCHEF!</strong> Meal Generator</h1>
+
+
+<div class="content">
+
+	Fill in the fields below for EasyCHEF! to create a meal for you!
+
+	<div class="containerFeedback">
+		<form>
+			<div class="form-group">
+				<label for="time_frame">Time Frame</label>
+				<select id="time_frame" name="time_frame" class="form-control" required>
+					<option disabled selected value=""> -- Please Select -- </option>
+					<option value="day">Day</option>
+					<option value="week">Week</option>
+				</select>
+				<label for="calories">Enter the <strong>MAXIMUM</strong> number of calories you would like for your meal plan?</label><br>
+				<input id="calories" type="number" name="caloriesinput" placeholder="Enter calories"><br><br>
+				<label for="dietType">Do you have a particular diet?</label>
+				<select id="dietType" name="diet" required>
+					<option disabled selected value=""> -- Please Select -- </option>
+					<option value="">None</option>
+					<option value="pescetarian">Pescetarian</option>
+					<option value="vegetarian">Vegetarian</option>
+					<option value="ovo vegetarian">Ovo Vegetarian</option>
+					<option value="lacto vegetarian">Lacto Vegetarian</option>
+					<option value="vegan">Vegan</option>
+					<option value="fruitarian">Fruitarian</option>
+					<option value="paleo">Paleo</option>
+				</select><br><br>
+				<input type="submit" value="submit">
+			</div>
+		</form>
+	</div>
+	
+</div>
+
+
+{% endblock %}
