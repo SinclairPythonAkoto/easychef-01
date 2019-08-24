@@ -120,7 +120,6 @@ def foods_feed():
 	# from newsapi import NewsApiClient 
 	url = ('https://newsapi.org/v2/everything?'
        'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&'
-       'from=2018-08-23&'
        'sortBy=popularity&'
        'apiKey=134b50d54e2948399817da7fa47477b0')
 
