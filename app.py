@@ -122,7 +122,7 @@ def foods_feed():
        'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&'
        'from=2019-08-23&'
        'sortBy=popularity&'
-       'apiKey=os.getenv("API_KEY")')
+       'apiKey=134b50d54e2948399817da7fa47477b0')
 
 	response = requests.get(url)
 
