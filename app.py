@@ -117,12 +117,12 @@ def easysearch_feedback():
 
 @app.route('/foods_feed')
 def foods_feed():
-	from newsapi import NewsApiClient 
+	# from newsapi import NewsApiClient 
 	url = ('https://newsapi.org/v2/everything?'
        'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&'
        'from=2019-08-23&'
        'sortBy=popularity&'
-       'apiKey=134b50d54e2948399817da7fa47477b0')
+       'apiKey=os.getenv("API_KEY")')
 
 	response = requests.get(url)
 
