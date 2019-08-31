@@ -118,7 +118,7 @@ def easysearch_feedback():
 @app.route('/foods_feed')
 def foods_feed(): 
 	url = ('https://newsapi.org/v2/everything?'
-       'q=health&nutrition&cooking&food&culinary&chef&recipes&kitchen&cuisine&'
+       'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&health&nutrition&'
        'from=2019-08-31&'
        'sortBy=popularity&'
        'apiKey=134b50d54e2948399817da7fa47477b0')
