@@ -119,7 +119,7 @@ def easysearch_feedback():
 def foods_feed(): 
 	url = ('https://newsapi.org/v2/everything?'
        'q=cooking&food&culinary&chef&recipes&kitchen&cuisine&health&nutrition&'
-       'from=2019-09-16&'
+       'from=2019-09-17&'
        'sortBy=popularity&'
        'apiKey=134b50d54e2948399817da7fa47477b0')
 
